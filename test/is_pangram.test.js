@@ -16,19 +16,22 @@ describe('isPangram()', () => {
 
   test('works with "abcdefghijklmnopqrstuvwxyz"', () => {
     // Arrange
+      const text = 'abcdefghijklmnopqrstuvwxyz';
 
     // Act
-
+      const answer = isPangram(test);
     // Assert
-
+      expect(answer).toBe(true);
   });
 
   test("missing character 'x'", () => {
     // Arrange
-
+    const text = 'the quick brown fo jumps over the lazy dog';
     // Act
+    const answer = isPangram(test);
 
     // Assert
+    expect(answer).toBe(false);
 
   });
 
