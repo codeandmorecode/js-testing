@@ -1,14 +1,14 @@
 const ALPHABET = 'abcdefghijklmnopqrstuvwxyz';
-const isPangram = function(text) {
-    const letterCount ={};
-    letters = text.split('');
+const isPangram = function (text) {
+    const letterCount = {};
+    const letters = text.split('');
     letters.forEach((letter) => {
-        if (letterCount[letter]){
-            letterCount[letter] += 1;
+        if (letterCount[letter]) {
+          letterCount[letter] += 1;
         } else {
-                letterCount[letter] = 1;
+          letterCount[letter] = 1;
         }
-        });
+      });    
     for (const letter of ALPHABET) {
         if (!letterCount[letter]){
             return false;
